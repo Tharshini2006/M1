@@ -10,8 +10,20 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```python
+#include<stdio.h>
+int main()
+{
+    float a=5.800000;
+    scanf("%f",&a);
+    printf("%f",a);
+    return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/494c065b-3d4c-4002-b46c-016f5ab81d60)
+
 
 
 
@@ -46,8 +58,42 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```python
+#include <stdio.h>
+int main()  
+{
+    int a;
+    scanf("%d",&a);
+    switch(a)
+    {
+        case 10:
+        printf ("Ten");
+        break;
+        case 11:
+        printf ("Eleven");
+        break;
+        case 12:
+        printf ("Twelve");
+        break;
+        case 13:
+        printf ("Thirteen");
+        break;
+        case 14:
+        printf ("Fourteen");
+        break;
+        case 15:
+        printf ("Fifteen");
+        break;
+        default:
+        printf ("invalid number.");
+        
+    }
+}
+```
 
 # OUTPUT:
+![image](https://github.com/user-attachments/assets/302b9f3d-1a7a-4195-ac18-39e16aaf8b7f)
+
 
 
 
@@ -80,8 +126,23 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
-
+```python
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    float principle,rate,year,CI;
+    scanf("%f",&CI);
+    scanf("%f",&year);
+    scanf("%f",&rate);
+    principle = CI/(pow((1 + (rate/100)),year));
+    printf("Principle Amount is = %.2f",principle);
+    
+}
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/96e97374-42dc-4960-b67f-9868b6975aa8)
+
 
 
 
@@ -111,8 +172,33 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```python
+#include <stdio.h>
+int main()  
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b)
+    {
+    printf("A is largest");
+    }
+    else if(b>c)
+    {
+        printf("B is largest");
+    }
+    else if(c>a)
+    {
+        printf("C is largest");
+    }
+    else
+    printf("A, B, C are equal");
+    return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/a01d0614-d8db-4078-8a9e-d0b11b2d8c13)
+
 
 
 
@@ -147,8 +233,27 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```python
+#include <stdio.h>
+int main()
+{
+    int s1,s2,s3,s4,s5,s6;
+    float total,average,percentage;
+    scanf("%d%d%d%d%d%d",&s1,&s2,&s3,&s4,&s5,&s6);
+    scanf("%f%f%f",&total,&average,&percentage);
+    total=s1+s2+s3+s4+s5+s6;
+    printf("Total marks = %.2f",total);
+    average=total/6;
+    printf("\nAverage marks = %.2f",average);
+    percentage=total/6;
+    printf("\nPercentage = %.2f",percentage);
+    return 0;
+    
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/ab986fc5-cece-4409-8a17-0a55a3ac7cc5)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
