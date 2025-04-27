@@ -27,7 +27,8 @@ int main()
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/52031e78-2c41-40e0-879a-4c227881ec22)
+![image](https://github.com/user-attachments/assets/506dc3fb-b265-4461-af49-4a7500783b9f)
+
 
 
 
@@ -86,7 +87,9 @@ return 0;
 ```
 
 # OUTPUT:
-![image](https://github.com/user-attachments/assets/39c4ea0c-2ef6-46c7-9568-91a1a083c1b6)
+![image](https://github.com/user-attachments/assets/90f02747-ccd8-4950-850a-6f98abd15403)
+
+
 
 
 
@@ -125,21 +128,24 @@ Write a program to find minimum between two fraction numbers using conditional o
 #include <stdio.h>
 int main()
 {
-     int num1, den1, num2, den2;
-     float frac1, frac2, min;
-     printf("Enter numerator and denominator of first fraction: ");
-     scanf("%d%d", &num1, &den1);
-     printf("Enter numerator and denominator of second fraction: ");
-     scanf("%d%d", &num2, &den2);
-     frac1 = (float)num1 / den1;
-     frac2 = (float)num2 / den2;
-     min = (frac1 < frac2) ? frac1 : frac2;
-     printf("Minimum value between the two fractions is: %.2f\n", min);
-     return 0;
+     int a,b;
+     scanf("%d%d",&a,&b);
+     if (a<b)
+     {
+         printf("Minimum between %d and %d is %d",a,b,a);
+     }
+    else
+    {
+        printf("Minimum between %d and %d is %d",a,b,b);
+    }
+
+return 0;
 }
+
 ```
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/2bf9882e-b422-4747-96b9-2afd1ba7c347)
+![image](https://github.com/user-attachments/assets/81fc3c21-1977-45c6-bc6a-a418e6fd7076)
+
 
 
 
@@ -173,22 +179,19 @@ Write a C program to check whether the input value is equal to 1 using simple if
 ## PROGRAM:
 ```python
 #include <stdio.h>
-int main() {
-     int value;
-     printf("Enter a value: ");
-     scanf("%d", &value);
-     if (value == 1) {
-         printf("The input value is equal to 1.\n");
-     } else {
-         printf("The input value is not equal to 1.\n");
-     }
-return 0;
+int main(){
+    int a;
+    scanf("%d",&a);
+    if(a==1)
+    printf("TRUE");
 }
+
   
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/1eea868d-8d57-402c-a5ca-3f031def96a0)
+![image](https://github.com/user-attachments/assets/d39255cf-4545-4250-a08b-cd93dff61afd)
+
 
 
 
@@ -227,43 +230,36 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 ## PROGRAM:
 ```python
 #include <stdio.h>
+#include <string.h>
 int main()
 {
-    int m1, m2, m3;
-    float tot, per;
-    printf("Enter marks of three subjects: ");
-    scanf("%d%d%d", &m1, &m2, &m3);
-    tot = m1 + m2 + m3;
-    per = tot / 3;
-    printf("Total Marks = %.2f\n", tot);
-    printf("Percentage = %.2f\n", per);
-    if (m1 >= 40 && m2 >= 40 && m3 >= 40)
-   {
-       if (per >= 60)
-       {
-           printf("Division = First\n");
-       }
-      else if (per >= 48)
-       {
-           printf("Division = Second\n");
-       }
-       else if (per >= 36)
-      {
-           printf("Division = Pass\n");
-      }
-  } 
-  else
-  {
-     printf("Division = Fail\n");
-  }
-return 0;
+    int phy,che,ca,total;
+    float per;
+    char div[10];
+    scanf("%d%d%d",&phy,&che,&ca);
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+    strcpy(div,"First");
+    else if (per<60&&per>=48)
+    strcpy(div,"Second");
+    else if (per<48&&per>=36)
+    strcpy(div,"Pass");
+    else
+    strcpy(div,"Fail");
+     printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total
+     return 0;
 }
+
+    
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/172e8f0a-f84a-4532-8c4a-82d34c46863b)
+![image](https://github.com/user-attachments/assets/1d2e6134-e72f-4d23-8579-09a1009d847f)
 
-![image](https://github.com/user-attachments/assets/d3de78cf-c6d4-433c-92a8-7228751cf675)
+![image](https://github.com/user-attachments/assets/5c663ceb-165c-4cef-a005-95c495b98032)
+
+
 
 
 
