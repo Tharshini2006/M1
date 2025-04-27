@@ -1,4 +1,4 @@
-
+NAME : THARSHINI.M
 # EX-01-Datatypes-Operators
 ## AIM:
 Write a C program to read 3 characters one by one and print the characters in a reverse order.
@@ -11,18 +11,24 @@ Write a C program to read 3 characters one by one and print the characters in a 
 
 ## PROGRAM:
 ```python
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    float a=5.800000;
-    scanf("%f",&a);
-    printf("%f",a);
+    char ch1, ch2, ch3;
+    printf("Enter first character: ");
+    scanf(" %c", &ch1);
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+    printf("Enter third character: ");
+    scanf(" %c", &ch3);
+    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
     return 0;
 }
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/494c065b-3d4c-4002-b46c-016f5ab81d60)
+![image](https://github.com/user-attachments/assets/52031e78-2c41-40e0-879a-4c227881ec22)
+
 
 
 
@@ -60,39 +66,28 @@ Write a C program to read A values and check whether A is positive number or not
 # PROGRAM:
 ```python
 #include <stdio.h>
-int main()  
+int main()
 {
-    int a;
-    scanf("%d",&a);
-    switch(a)
+    int A;
+    printf("Enter a value: ");
+    scanf("%d", &A);
+    if (A > 0)
     {
-        case 10:
-        printf ("Ten");
-        break;
-        case 11:
-        printf ("Eleven");
-        break;
-        case 12:
-        printf ("Twelve");
-        break;
-        case 13:
-        printf ("Thirteen");
-        break;
-        case 14:
-        printf ("Fourteen");
-        break;
-        case 15:
-        printf ("Fifteen");
-        break;
-        default:
-        printf ("invalid number.");
-        
+       printf("%d is a positive number.\n", A);
     }
+   else
+   {
+       printf("%d is not a positive number.\n", A);
+   }
+return 0;
 }
+
+
 ```
 
 # OUTPUT:
-![image](https://github.com/user-attachments/assets/302b9f3d-1a7a-4195-ac18-39e16aaf8b7f)
+![image](https://github.com/user-attachments/assets/39c4ea0c-2ef6-46c7-9568-91a1a083c1b6)
+
 
 
 
@@ -128,20 +123,24 @@ Write a program to find minimum between two fraction numbers using conditional o
 ## PROGRAM:
 ```python
 #include <stdio.h>
-#include<math.h>
 int main()
 {
-    float principle,rate,year,CI;
-    scanf("%f",&CI);
-    scanf("%f",&year);
-    scanf("%f",&rate);
-    principle = CI/(pow((1 + (rate/100)),year));
-    printf("Principle Amount is = %.2f",principle);
-    
+     int num1, den1, num2, den2;
+     float frac1, frac2, min;
+     printf("Enter numerator and denominator of first fraction: ");
+     scanf("%d%d", &num1, &den1);
+     printf("Enter numerator and denominator of second fraction: ");
+     scanf("%d%d", &num2, &den2);
+     frac1 = (float)num1 / den1;
+     frac2 = (float)num2 / den2;
+     min = (frac1 < frac2) ? frac1 : frac2;
+     printf("Minimum value between the two fractions is: %.2f\n", min);
+     return 0;
 }
 ```
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/96e97374-42dc-4960-b67f-9868b6975aa8)
+![image](https://github.com/user-attachments/assets/2bf9882e-b422-4747-96b9-2afd1ba7c347)
+
 
 
 
@@ -174,30 +173,23 @@ Write a C program to check whether the input value is equal to 1 using simple if
 ## PROGRAM:
 ```python
 #include <stdio.h>
-int main()  
-{
-    int a,b,c;
-    scanf("%d%d%d",&a,&b,&c);
-    if(a>b)
-    {
-    printf("A is largest");
-    }
-    else if(b>c)
-    {
-        printf("B is largest");
-    }
-    else if(c>a)
-    {
-        printf("C is largest");
-    }
-    else
-    printf("A, B, C are equal");
-    return 0;
+int main() {
+     int value;
+     printf("Enter a value: ");
+     scanf("%d", &value);
+     if (value == 1) {
+         printf("The input value is equal to 1.\n");
+     } else {
+         printf("The input value is not equal to 1.\n");
+     }
+return 0;
 }
+  
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/a01d0614-d8db-4078-8a9e-d0b11b2d8c13)
+![image](https://github.com/user-attachments/assets/1eea868d-8d57-402c-a5ca-3f031def96a0)
+
 
 
 
@@ -237,23 +229,43 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 #include <stdio.h>
 int main()
 {
-    int s1,s2,s3,s4,s5,s6;
-    float total,average,percentage;
-    scanf("%d%d%d%d%d%d",&s1,&s2,&s3,&s4,&s5,&s6);
-    scanf("%f%f%f",&total,&average,&percentage);
-    total=s1+s2+s3+s4+s5+s6;
-    printf("Total marks = %.2f",total);
-    average=total/6;
-    printf("\nAverage marks = %.2f",average);
-    percentage=total/6;
-    printf("\nPercentage = %.2f",percentage);
-    return 0;
-    
+    int m1, m2, m3;
+    float tot, per;
+    printf("Enter marks of three subjects: ");
+    scanf("%d%d%d", &m1, &m2, &m3);
+    tot = m1 + m2 + m3;
+    per = tot / 3;
+    printf("Total Marks = %.2f\n", tot);
+    printf("Percentage = %.2f\n", per);
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40)
+   {
+       if (per >= 60)
+       {
+           printf("Division = First\n");
+       }
+      else if (per >= 48)
+       {
+           printf("Division = Second\n");
+       }
+       else if (per >= 36)
+      {
+           printf("Division = Pass\n");
+      }
+  } 
+  else
+  {
+     printf("Division = Fail\n");
+  }
+return 0;
 }
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/ab986fc5-cece-4409-8a17-0a55a3ac7cc5)
+![image](https://github.com/user-attachments/assets/172e8f0a-f84a-4532-8c4a-82d34c46863b)
+
+![image](https://github.com/user-attachments/assets/d3de78cf-c6d4-433c-92a8-7228751cf675)
+
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
